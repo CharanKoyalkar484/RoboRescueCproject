@@ -44,6 +44,10 @@ std::string RobotManager::getDetails(){
 	for(auto lidar : getRobots<Lidar>()){
 		ss << "\tId: " << lidar->getId() << std::endl;
 	}
+	for(micro lidar : getMicro<Lidar>()){
+		ss << "\tId: " << lidar->getId() << std::endl;
+	}
+	ss << "Lidar's" << std::endl;
 	ss << std::endl;
 
 	return ss.str();
