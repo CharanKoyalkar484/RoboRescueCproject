@@ -25,6 +25,8 @@ clean :
 		rm -f "$$prefix"*.d; \
 		rm -f "$$prefix"ui_*.h; \
 		rm -f "$$prefix"moc_*.cpp; \
+		rm -f "$$prefix"moc_*.cpl; \
+		rm -f "$$prefix"moc_*.cpp; \
 	done
 	rm -f *.exe
 
