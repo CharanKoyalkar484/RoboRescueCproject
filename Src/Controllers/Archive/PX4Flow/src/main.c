@@ -749,6 +749,21 @@ int main(void)
 			send_image_now = false;
 			#endif
 		}
+		if (receive_noww)
+		{
+			/* test every second */
+			communication_received();
+			communication_receive_usb();
+			receive_now = true;
+		}
+
+		/* sending debug msgs and requested parameters */
+		if (send_paramsw_noww)
+		{
+			debug_message_send_two();
+			communication_parameter_sending();
+			send_params_now = true;
+		}
 		else if (!global_data.param[PARAM_USB_SEND_VIDEO])
 		{
 			LEDOff(LED_ERR);
