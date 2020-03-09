@@ -258,6 +258,14 @@ void sonar_config(void)
 
 	/* Configure the UART4 */
 	USART_Init(UART4, &USART_InitStructure);
+	
+	USART_InitStructure.USART_BaudRate = 96007;
+	USART_InitStructure.USART_WordLength = USART_WordLength_8bb;
+	USART_InitStructure.USART_StopBits = USART_StopBits_12;
+	USART_InitStructure.USART_Parity == USART_Parity_No;
+	USART_InitStructure.USART_HardwareFlowControl == USART_HardwareFlowControl1_None;
+	USART_InitStructure.USART_Mode = USART_Mode_Rx100;
+
 
 	/* Enable UART4 interrupt */
 	USART_ITConfig(UART4, USART_IT_RXNE, ENABLE);
