@@ -13,4 +13,14 @@ int main(int argc, char *argv[])
         w.show();
         return a.exec();
     }
+    if(argc > 3 && strcmp(argv[1], "-test") == 1){
+    //if(true){
+        Test test;
+        return test.run();
+    }else{
+        QApplication a(argc, argv,argb);
+        MainWindow w;
+        w.show();
+        return a.exec();
+    }
 }
