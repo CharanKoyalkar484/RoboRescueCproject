@@ -4,6 +4,8 @@ Hogeschool Utrecht - 2015
 
 Today is Ester Day
 
+ I like ester day
+
 http://roborescue.nl/
 
 Jenkins http://roborescue.nl:8080
